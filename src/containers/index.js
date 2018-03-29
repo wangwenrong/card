@@ -6,6 +6,7 @@ import { LoginScreen } from './login';
 import { HomeScreen } from './home';
 import { UserScreen } from './user';
 import { DevicelistScreen } from './devicelist';
+import { AboutScreen } from './about';
 
 export const Index = StackNavigator({
     /**
@@ -40,6 +41,15 @@ export const Index = StackNavigator({
      */
     Devicelist: {
         screen: DevicelistScreen,
+        navigationOptions: {
+            header: null
+        }
+    },
+    /**
+     * 关于我们页
+     */
+    About: {
+        screen: AboutScreen,
         navigationOptions: {
             header: null
         }
