@@ -1,8 +1,7 @@
 import React from 'react';
-import axios from 'axios';
 import { View, Text, TextInput, TouchableOpacity, StatusBar, Image, Button } from 'react-native';
 // import { StackNavigator, NavigationActions } from 'react-navigation';
-
+import { login } from '../service'
 
 
 export class LoginScreen extends React.Component {
@@ -58,23 +57,8 @@ export class LoginScreen extends React.Component {
     }
     handleLogin = () => {
         const { navigate } = this.props.navigation;
-        const BASEURL = 'http://gis.cloud.rtzltech.cn:8010/monitoringserver/';
-        let instance = axios.create({
-            timeout: 30000,
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'Accept': '*/*',
-                'Content-Type': 'application/x-www-form-urlencoded',
-            }
-        });
-        instance.post(`${BASEURL}login`,
-            `loginname=obdtest&pwd=1234`)
-            .then(({ data }) => {
-                console.log('数据', data)
-                navigate('Home')
-            })
-            .catch(function (error) {
-                console.log(error.response);
-            });
+        login(`loginname=obdtest&pwd=1234`, () => {
+            navigate('Home')
+        })
     }
 }

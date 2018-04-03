@@ -6,6 +6,9 @@ import { View, Text, TextInput, TouchableOpacity, StatusBar, Image, Button } fro
 export class HomeScreen extends React.Component {
     static navigationOptions = {
     };
+    constructor(props) {
+        super(props);
+    }
     render() {
         const { navigate } = this.props.navigation;
         return (
@@ -51,7 +54,11 @@ export class HomeScreen extends React.Component {
                                 <Text style={{fontSize:14, color:'#a1a1a1'}} >位置服务、轨迹回放、报警历史</Text>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ flexDirection: 'row', borderBottomColor:'#d1d1d1', borderBottomWidth:1, paddingBottom:20, paddingTop:20 }} >
+                    <TouchableOpacity 
+                        onPress={()=>{(
+                            navigate('Fencelist')
+                        )}}
+                        style={{ flexDirection: 'row', borderBottomColor:'#d1d1d1', borderBottomWidth:1, paddingBottom:20, paddingTop:20 }} >
                         <View style={{ width: 70, height: 70, marginRight: 15 }} >
                             <Image
                                 source={require('../img/indexOne.png')}

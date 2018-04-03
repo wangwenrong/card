@@ -6,7 +6,10 @@ import { LoginScreen } from './login';
 import { HomeScreen } from './home';
 import { UserScreen } from './user';
 import { DevicelistScreen } from './devicelist';
+import { FencelistScreen } from './fencelist';
 import { AboutScreen } from './about';
+import { FeedbackScreen } from './feedback';
+
 
 export const Index = StackNavigator({
     /**
@@ -46,10 +49,28 @@ export const Index = StackNavigator({
         }
     },
     /**
+     * 围栏列表页
+     */
+    Fencelist: {
+        screen: FencelistScreen,
+        navigationOptions: {
+            header: null
+        }
+    },
+    /**
      * 关于我们页
      */
     About: {
         screen: AboutScreen,
+        navigationOptions: {
+            header: null
+        }
+    },
+    /**
+     * 意见反馈
+     */
+    Feedback: {
+        screen: FeedbackScreen,
         navigationOptions: {
             header: null
         }

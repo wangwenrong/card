@@ -13,8 +13,7 @@ export class AboutScreen extends React.Component{
             <Page title='关于我们' >
                 <Text>关于我们关于我们关于我们关于我们关于我们</Text>
                 <Flex>
-                    <Text>关于我们关于我们关于我们关于我们关于我们</Text>
-                    
+                    <Text>关于我们关于我们关于我们关于我们关于我们</Text>              
                 </Flex>
             </Page>
         )

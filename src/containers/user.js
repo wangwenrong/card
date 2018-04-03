@@ -29,12 +29,16 @@ export class UserScreen extends React.Component {
                         }}
                         style={{height:40, alignItems:'center', flexDirection: 'row', borderBottomColor:'#d1d1d1', borderBottomWidth:1 }} >
                         <Text>关于我们</Text>
-                        <Image src={require('../img/arrow.png')} style={{width:30, height:30}} />
+                        <Image source={require('../img/arrow.png')} style={{width:30, height:30}} />
                     </TouchableOpacity>
-                    <View style={{height:40, alignItems:'center',  flexDirection: 'row', borderBottomColor:'#d1d1d1', borderBottomWidth:1 }} >
+                    <TouchableOpacity 
+                        onPress={()=>{
+                            navigate('Feedback')
+                        }}
+                        style={{height:40, alignItems:'center',  flexDirection: 'row', borderBottomColor:'#d1d1d1', borderBottomWidth:1 }} >
                         <Text>意见反馈</Text>
-                        <Image src={require('../img/arrow.png')} style={{width:30, height:30}} />
-                    </View>
+                        <Image source={require('../img/arrow.png')} style={{width:30, height:30}} />
+                    </TouchableOpacity>
                     <View style={{height:40, alignItems:'center',  flexDirection: 'row', borderBottomColor:'#d1d1d1', borderBottomWidth:1 }} >
                         <Text>软件版本</Text>
                         <Text>V1.40</Text>
